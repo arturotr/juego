@@ -13,9 +13,7 @@ var state: Data = load("res://game/rooms/puerto/room_puerto.tres")
 # character position and facing direction, active walkable area, props visibility, etc.).
 func _on_room_entered() -> void:
 	pass
-
-
-# Called after the room transition completes; the room is now visible.
+	# Called after the room transition completes; the room is now visible.
 # Implement this to start cutscenes, play sounds, etc.
 func _on_room_transition_finished() -> void:
 	# You can use await E.queue([]) to run a sequence of actions here.

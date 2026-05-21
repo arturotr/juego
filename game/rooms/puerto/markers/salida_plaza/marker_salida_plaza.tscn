@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://5d0jkqyjy7jg"]
+
+[node name="SalidaPlaza" type="Marker2D" unique_id=1015375513]
+visible = false

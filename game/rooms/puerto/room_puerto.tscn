@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dqegg2fkvwcnv" path="res://game/rooms/puerto/regions/regionpuerto/region_regionpuerto.tscn" id="5_ng1pa"]
 [ext_resource type="PackedScene" uid="uid://0qyxasqreroj" path="res://game/characters/mateo/character_mateo.tscn" id="6_7u7b6"]
 [ext_resource type="PackedScene" uid="uid://bsd4f4xvx3o67" path="res://game/rooms/puerto/regions/salida_a_casas/region_salida_a_casas.tscn" id="6_l0mrq"]
+[ext_resource type="PackedScene" uid="uid://5d0jkqyjy7jg" path="res://game/rooms/puerto/markers/salida_plaza/marker_salida_plaza.tscn" id="7_yopo8"]
 
 [node name="RoomPuerto" type="Node2D" unique_id=2114586584]
 script = ExtResource("1_4c27d")
@@ -17,7 +18,6 @@ height = 200
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=1291843428]
 
 [node name="CaminoPuerto" parent="WalkableAreas" unique_id=1265123045 instance=ExtResource("2_wtumk")]
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(71, -44, 32, 10, 60, 16, 57, 28, 20, 26, -126, 26, -125, -2, 6, 12, 29, -11, 10, -25, 15, -27, 33, -15, 63, -45)])
 
 [node name="Props" type="Node2D" parent="." unique_id=47136504]
 
@@ -50,6 +50,10 @@ position = Vector2(160, 100)
 interaction_polygon_position = Vector2(32, -29)
 
 [node name="Markers" type="Node2D" parent="." unique_id=1506852908]
+
+[node name="SalidaPlaza" parent="Markers" unique_id=1015375513 instance=ExtResource("7_yopo8")]
+position = Vector2(194.77159, 69.29263)
+scale = Vector2(0.25, 0.25)
 
 [node name="Characters" type="Node2D" parent="." unique_id=1848755541]
 

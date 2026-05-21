@@ -17,6 +17,7 @@ interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(71, -44, 32,
 interaction_polygon_position = Vector2(-32, 15)
 
 [node name="Perimeter" type="NavigationRegion2D" parent="." unique_id=1360649781]
+visible = false
 modulate = Color(0, 1, 0, 1)
 position = Vector2(-32, 15)
 navigation_polygon = SubResource("NavigationPolygon_7acqe")

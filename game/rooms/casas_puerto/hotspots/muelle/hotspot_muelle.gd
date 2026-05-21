@@ -14,8 +14,6 @@ func _on_click() -> void:
 	await C.player.walk_to(Vector2(160,155))
 	await C.player.face_clicked()
 	R.goto_room("Puerto")
-#	await C.player.say("What a nice view")
-
 
 # Called when the hotspot is double-clicked
 func _on_double_click() -> void:
