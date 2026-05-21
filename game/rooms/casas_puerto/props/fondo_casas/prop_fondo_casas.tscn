@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://d2b0anoimr2sw"]
+
+[ext_resource type="Script" uid="uid://chf3difttj8u6" path="res://game/rooms/casas_puerto/props/fondo_casas/prop_fondo_casas.gd" id="1_hbx13"]
+[ext_resource type="Texture2D" uid="uid://dx1tiaiafjn73" path="res://game/rooms/casas_puerto/props/fondo_casas/fondo_casas.png" id="2_s8um8"]
+
+[node name="FondoCasas" type="Area2D" unique_id=425645134]
+input_pickable = false
+script = ExtResource("1_hbx13")
+texture = ExtResource("2_s8um8")
+script_name = "FondoCasas"
+description = "Fondo Casas"
+clickable = false
+cursor = 1
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1517335024]
+texture_filter = 1
+texture = ExtResource("2_s8um8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=80777419]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1004017275]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=396713680]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

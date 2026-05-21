@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://dowqnh2jr5usj"]
+
+[ext_resource type="Theme" uid="uid://dgeh6qcpfbhl2" path="res://game/gui/resources/gui_theme.tres" id="1_3qkco"]
+[ext_resource type="Script" uid="uid://dko31vfnesq42" path="res://game/gui/components/hover_text/hover_text_custom.gd" id="2_18lgb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3qkco"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="HoverText" type="Control" unique_id=934640125 groups=["popochiu_gui_component"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 136.0
+offset_bottom = -54.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_3qkco")
+script = ExtResource("2_18lgb")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1207595882]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 14.0
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_3qkco")
+bbcode_enabled = true
+text = "[center]text for hovered objects[/center]"
+fit_content = true
+scroll_active = false
+scroll_following_visible_characters = true

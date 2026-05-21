@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dqegg2fkvwcnv"]
+
+[ext_resource type="Script" path="res://game/rooms/puerto/regions/regionpuerto/region_regionpuerto.gd" id="1_q7wte"]
+
+[node name="Regionpuerto" type="Area2D" unique_id=431849644]
+monitorable = false
+script = ExtResource("1_q7wte")
+script_name = "Regionpuerto"
+description = "Regionpuerto"
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1477281329]
+visible = false
+modulate = Color(0, 1, 1, 1)
+polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)

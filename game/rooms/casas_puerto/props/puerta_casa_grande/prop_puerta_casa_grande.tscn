@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://7aw8sha0506x"]
+
+[ext_resource type="Script" uid="uid://crt5flmqtoedy" path="res://game/rooms/casas_puerto/props/puerta_casa_grande/prop_puerta_casa_grande.gd" id="1_0lmi7"]
+[ext_resource type="Texture2D" uid="uid://ciuujiytk4jr2" path="res://game/rooms/casas_puerto/props/puerta_casa_grande/Puerta_cerrada.png" id="2_1ckv4"]
+
+[node name="PuertaCasaGrande" type="Area2D" unique_id=1563327051]
+position = Vector2(-9, 0)
+script = ExtResource("1_0lmi7")
+script_name = "PuertaCasaGrande"
+description = "Puerta"
+cursor = 1
+interaction_polygon = PackedVector2Array(-13, -18, 8, -18, 8, 11, -13, 11)
+interaction_polygon_position = Vector2(12, -11)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2006379637]
+texture_filter = 1
+position = Vector2(-44, -35)
+texture = ExtResource("2_1ckv4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1360436446]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1433601270]
+visible = false
+modulate = Color(1, 1, 0, 1)
+position = Vector2(12, -11)
+polygon = PackedVector2Array(-13, -18, 8, -18, 8, 11, -13, 11)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1801033350]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

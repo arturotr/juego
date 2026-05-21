@@ -1,0 +1,181 @@
+[gd_scene format=3 uid="uid://b8x0upwcey6y"]
+
+[ext_resource type="Theme" uid="uid://dgeh6qcpfbhl2" path="res://game/gui/resources/gui_theme.tres" id="1_utwuj"]
+[ext_resource type="Script" uid="uid://3rxoskt0wqte" path="res://game/gui/components/9_verb_panel/9_verb_panel_custom.gd" id="2_g6sga"]
+[ext_resource type="PackedScene" uid="uid://dowqnh2jr5usj" path="res://game/gui/components/hover_text/hover_text.tscn" id="3_d7e26"]
+[ext_resource type="Script" uid="uid://gygd8sxrlddt" path="res://game/gui/components/9_verb_hover_text/9_verb_hover_text_custom.gd" id="4_l02vw"]
+[ext_resource type="Script" uid="uid://cd0jx4b1b2jij" path="res://game/gui/components/commands_container/9_verb_commands_container_custom.gd" id="5_k13t0"]
+[ext_resource type="ButtonGroup" uid="uid://dji15loyxpx1i" path="res://game/gui/resources/9_verb_button_group.tres" id="6_e1ase"]
+[ext_resource type="Script" uid="uid://dhk7sixbvmufw" path="res://game/gui/components/commands_container/9_verb_command_button_custom.gd" id="7_deyob"]
+[ext_resource type="PackedScene" uid="uid://c855tfu1b72du" path="res://game/gui/components/9_verb_inventory_grid/9_verb_inventory_grid.tscn" id="8_qmrlm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_utwuj"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g6sga"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="9VerbPanel" type="Control" unique_id=956930933 groups=["popochiu_gui_component"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_utwuj")
+script = ExtResource("2_g6sga")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1662697674]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -64.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_utwuj")
+metadata/_edit_group_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=523588313]
+modulate = Color(0.65882355, 0, 0.65882355, 1)
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 2
+
+[node name="HoverTextCentered" parent="PanelContainer/VBoxContainer" unique_id=934640125 instance=ExtResource("3_d7e26")]
+unique_name_in_owner = true
+modulate = Color(0.65882355, 0, 0.65882355, 1)
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("4_l02vw")
+follows_cursor = false
+
+[node name="Verbs&InventoryContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer" unique_id=692833692]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_g6sga")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/Verbs&InventoryContainer" unique_id=1595264141]
+modulate = Color(0.65882355, 0, 0.65882355, 1)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 1
+
+[node name="CommandsContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/Verbs&InventoryContainer/HBoxContainer" unique_id=1891056863]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+script = ExtResource("5_k13t0")
+
+[node name="Row1" type="HBoxContainer" parent="PanelContainer/VBoxContainer/Verbs&InventoryContainer/HBoxContainer/CommandsContainer" unique_id=843760981]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Open" type="Button" parent="PanelContainer/VBoxContainer/Verbs&InventoryContainer/HBoxContainer/CommandsContainer/Row1" unique_id=568044554]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+button_group = ExtResource("6_e1ase")
+text = "Abrir"
+script = ExtResource("7_deyob")
+command = 1
+
+[node name="PickUp" type="Button" parent="PanelContainer/VBoxContainer/Verbs&InventoryContainer/HBoxContainer/CommandsContainer/Row1" unique_id=685569361]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+button_group = ExtResource("6_e1ase")
+text = "Coger"
+script = ExtResource("7_deyob")
+command = 2
+
+[node name="Push" type="Button" parent="PanelContainer/VBoxContainer/Verbs&InventoryContainer/HBoxContainer/CommandsContainer/Row1" unique_id=2106805857]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+button_group = ExtResource("6_e1ase")
+text = "Empujar"
+script = ExtResource("7_deyob")
+command = 3
+
+[node name="Row2" type="HBoxContainer" parent="PanelContainer/VBoxContainer/Verbs&InventoryContainer/HBoxContainer/CommandsContainer" unique_id=222104545]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Close" type="Button" parent="PanelContainer/VBoxContainer/Verbs&InventoryContainer/HBoxContainer/CommandsContainer/Row2" unique_id=1504377581]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+button_group = ExtResource("6_e1ase")
+text = "Cerrar"
+script = ExtResource("7_deyob")
+command = 4
+
+[node name="LookAt" type="Button" parent="PanelContainer/VBoxContainer/Verbs&InventoryContainer/HBoxContainer/CommandsContainer/Row2" unique_id=861596467]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+button_group = ExtResource("6_e1ase")
+text = "Mirar"
+script = ExtResource("7_deyob")
+command = 5
+
+[node name="Pull" type="Button" parent="PanelContainer/VBoxContainer/Verbs&InventoryContainer/HBoxContainer/CommandsContainer/Row2" unique_id=1674680354]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+button_group = ExtResource("6_e1ase")
+text = "Tirar"
+script = ExtResource("7_deyob")
+command = 6
+
+[node name="Row3" type="HBoxContainer" parent="PanelContainer/VBoxContainer/Verbs&InventoryContainer/HBoxContainer/CommandsContainer" unique_id=1833451516]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Give" type="Button" parent="PanelContainer/VBoxContainer/Verbs&InventoryContainer/HBoxContainer/CommandsContainer/Row3" unique_id=1639548325]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+button_group = ExtResource("6_e1ase")
+text = "Dar"
+script = ExtResource("7_deyob")
+command = 7
+
+[node name="TalkTo" type="Button" parent="PanelContainer/VBoxContainer/Verbs&InventoryContainer/HBoxContainer/CommandsContainer/Row3" unique_id=1725510308]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+button_group = ExtResource("6_e1ase")
+text = "Hablar a"
+script = ExtResource("7_deyob")
+command = 8
+
+[node name="Use" type="Button" parent="PanelContainer/VBoxContainer/Verbs&InventoryContainer/HBoxContainer/CommandsContainer/Row3" unique_id=2108680182]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+button_group = ExtResource("6_e1ase")
+text = "Usar"
+script = ExtResource("7_deyob")
+command = 9
+
+[node name="9VerbInventoryGrid" parent="PanelContainer/VBoxContainer/Verbs&InventoryContainer/HBoxContainer" unique_id=1282491480 instance=ExtResource("8_qmrlm")]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = null

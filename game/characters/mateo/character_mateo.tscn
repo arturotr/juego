@@ -1,0 +1,142 @@
+[gd_scene format=3 uid="uid://0qyxasqreroj"]
+
+[ext_resource type="Script" uid="uid://cfpsvk6la425j" path="res://game/characters/mateo/character_mateo.gd" id="1_w2ljm"]
+[ext_resource type="Texture2D" uid="uid://bxah66rtq8r1y" path="res://game/characters/mateo/walk_s/frame_000.png" id="2_i7oka"]
+[ext_resource type="AnimationLibrary" uid="uid://c8lee3au67wr5" path="res://animacionesMateo.res" id="2_q16me"]
+
+[sub_resource type="Animation" id="Animation_o3xvg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_i7oka")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:animation_prefix")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["walk_"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:walk_animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["walk_s"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:idle_animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationPlayer:root_node")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [NodePath("..")]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Sprite2D:hframes")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Sprite2D:vframes")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ot8e6"]
+_data = {
+&"RESET": SubResource("Animation_o3xvg")
+}
+
+[node name="CharacterMateo" type="Area2D" unique_id=462872113]
+script = ExtResource("1_w2ljm")
+walk_speed = 50.0
+walk_animation = "walk_s"
+animation_prefix = "walk_"
+script_name = "Mateo"
+description = "Mateo"
+cursor = 8
+interaction_polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1938382154]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=319017592]
+texture_filter = 1
+position = Vector2(0, -22)
+texture = ExtResource("2_i7oka")
+hframes = 8
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=463427010]
+visible = false
+scale = Vector2(0.1, 0.1)
+polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=591059342]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1882996309]
+libraries/ = SubResource("AnimationLibrary_ot8e6")
+libraries/animacionesMateo = ExtResource("2_q16me")

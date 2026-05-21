@@ -1,0 +1,39 @@
+# @popochiu-docs-ignore-class
+@tool
+extends PopochiuRoom
+
+const Data := preload('room_casas_puerto_state.gd')
+
+var state: Data = load("res://game/rooms/casas_puerto/room_casas_puerto.tres")
+
+
+#region Virtual ####################################################################################
+# Called when Popochiu loads the room. At this point the room is in the scene tree but not yet
+# visible.
+# Add any code you want to setup the stage before the room is shown to the player (e.g. setting
+# character position and facing direction, active walkable area, props visibility, etc.).
+func _on_room_entered() -> void:
+	C.player.stop_walking()
+	C.player.scale = Vector2(0.7, 0.7)
+	C.player.global_position = $Markers/EntradaPuerto.global_position
+	# 1. Posicionamos a Mateo en el Marker que hemos creado
+	# Nota: $Markers/EntradaPuerto busca el nodo que creaste arriba
+	# 2. Resetear el tamaño (escala)
+	# Si su tamaño normal es el original, la escala es (1, 1)
+	
+
+
+# Called after the room transition completes; the room is now visible.
+# Implement this to start cutscenes, play sounds, etc.
+func _on_room_transition_finished() -> void:
+	pass
+	# You can use await E.queue([]) to run a sequence of actions here.
+# Called before Popochiu unloads the room.
+# At this point the screen is black, processing is disabled, and characters
+# have been removed from the $Characters node.
+# Implement cleanup code, handle custom data or states before leaving the room, etc. if needed.
+func _on_room_exited() -> void:
+	pass
+
+
+#endregion

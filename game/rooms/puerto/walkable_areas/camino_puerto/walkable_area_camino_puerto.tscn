@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cpn70cmwel0g7"]
+
+[ext_resource type="Script" uid="uid://depjns65tmvu7" path="res://game/rooms/puerto/walkable_areas/camino_puerto/walkable_area_camino_puerto.gd" id="1_7acqe"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_7acqe"]
+vertices = PackedVector2Array(29, -11, 10, -25, 15, -27, 33, -15, 63, -45, 71, -44, 32, 10, 6, 12, 20, 26, -126, 26, -125, -2, 57, 28, 60, 16)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 3), PackedInt32Array(0, 3, 6), PackedInt32Array(7, 0, 6, 8), PackedInt32Array(9, 10, 7, 8), PackedInt32Array(11, 8, 6, 12)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(71, -44, 32, 10, 60, 16, 57, 28, 20, 26, -126, 26, -125, -2, 6, 12, 29, -11, 10, -25, 15, -27, 33, -15, 63, -45)])
+agent_radius = 0.0
+
+[node name="CaminoPuerto" type="Node2D" unique_id=1265123045]
+position = Vector2(160, 100)
+script = ExtResource("1_7acqe")
+script_name = "CaminoPuerto"
+description = "Camino Puerto"
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(71, -44, 32, 10, 60, 16, 57, 28, 20, 26, -126, 26, -125, -2, 6, 12, 29, -11, 10, -25, 15, -27, 33, -15, 63, -45)])
+interaction_polygon_position = Vector2(-32, 15)
+
+[node name="Perimeter" type="NavigationRegion2D" parent="." unique_id=1360649781]
+modulate = Color(0, 1, 0, 1)
+position = Vector2(-32, 15)
+navigation_polygon = SubResource("NavigationPolygon_7acqe")

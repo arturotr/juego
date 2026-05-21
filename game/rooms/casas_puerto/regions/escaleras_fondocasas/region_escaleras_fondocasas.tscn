@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://0hv3hxw7kuvi"]
+
+[ext_resource type="Script" path="res://game/rooms/casas_puerto/regions/escaleras_fondocasas/region_escaleras_fondocasas.gd" id="1_ivodt"]
+
+[node name="EscalerasFondocasas" type="Area2D" unique_id=858379167]
+monitorable = false
+script = ExtResource("1_ivodt")
+script_name = "EscalerasFondocasas"
+description = "Escaleras Fondocasas"
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1691785270]
+visible = false
+modulate = Color(0, 1, 1, 1)
+polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)

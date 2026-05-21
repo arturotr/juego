@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://cynsvjp5tuv1b"]
+
+[ext_resource type="Script" uid="uid://c86hausjrrj3t" path="res://game/rooms/casas_puerto/room_casas_puerto.gd" id="1_n6qgg"]
+[ext_resource type="PackedScene" uid="uid://bh02ji1rd24kp" path="res://game/rooms/casas_puerto/walkable_areas/area_casas_puerto/walkable_area_area_casas_puerto.tscn" id="2_s12dc"]
+[ext_resource type="PackedScene" uid="uid://d2b0anoimr2sw" path="res://game/rooms/casas_puerto/props/fondo_casas/prop_fondo_casas.tscn" id="3_vf483"]
+[ext_resource type="PackedScene" uid="uid://k8032yjnyijw" path="res://game/rooms/casas_puerto/hotspots/muelle/hotspot_muelle.tscn" id="4_ofl3d"]
+[ext_resource type="PackedScene" uid="uid://7aw8sha0506x" path="res://game/rooms/casas_puerto/props/puerta_casa_grande/prop_puerta_casa_grande.tscn" id="4_qlkjg"]
+[ext_resource type="PackedScene" uid="uid://0hv3hxw7kuvi" path="res://game/rooms/casas_puerto/regions/escaleras_fondocasas/region_escaleras_fondocasas.tscn" id="4_s12dc"]
+[ext_resource type="PackedScene" uid="uid://d3jwv6shsp5jk" path="res://game/rooms/casas_puerto/markers/entrada_puerto/marker_entrada_puerto.tscn" id="4_vf483"]
+
+[node name="RoomCasasPuerto" type="Node2D" unique_id=2100480487]
+script = ExtResource("1_n6qgg")
+script_name = "CasasPuerto"
+width = 320
+height = 200
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=1558443233]
+
+[node name="AreaCasasPuerto" parent="WalkableAreas" unique_id=1715359670 instance=ExtResource("2_s12dc")]
+
+[node name="Props" type="Node2D" parent="." unique_id=1879209998]
+position = Vector2(0, -27)
+
+[node name="FondoCasas" parent="Props" unique_id=425645134 instance=ExtResource("3_vf483")]
+position = Vector2(160, 100)
+baseline = -30
+walk_to_point = Vector2(1.0928345, 56.280304)
+look_at_point = Vector2(1.0928345, 56.82672)
+
+[node name="PuertaCasaGrande" parent="Props" unique_id=1563327051 instance=ExtResource("4_qlkjg")]
+position = Vector2(204, 135)
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=486992552]
+
+[node name="Muelle" parent="Hotspots" unique_id=1122374628 instance=ExtResource("4_ofl3d")]
+position = Vector2(160, 144)
+
+[node name="Regions" type="Node2D" parent="." unique_id=1091960286]
+
+[node name="EscalerasFondocasas" parent="Regions" unique_id=858379167 instance=ExtResource("4_s12dc")]
+position = Vector2(160, 100)
+scaling = true
+scale_top = 0.3
+interaction_polygon = PackedVector2Array(-10, -10, -2, -24, -4, -34, 2, -35, 9, -23, 10, -10, 13, 10, 30, 20, 55, 19, 73, 30, 126, 45, 89, 51, 38, 52, -46, 53, -130, 52, -160, 52, -160, 28, -69, 28, -17, 10)
+interaction_polygon_position = Vector2(0, -8)
+
+[node name="Markers" type="Node2D" parent="." unique_id=1426458425]
+
+[node name="EntradaPuerto" parent="Markers" unique_id=216202025 instance=ExtResource("4_vf483")]
+position = Vector2(161.58356, 139.92915)
+
+[node name="Characters" type="Node2D" parent="." unique_id=803445156]

@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://drcepqfrdrcyt"]
+
+[ext_resource type="Script" uid="uid://juiirqnq47h8" path="res://game/rooms/puerto/room_puerto.gd" id="1_4c27d"]
+[ext_resource type="PackedScene" uid="uid://d03111dewlv18" path="res://game/rooms/puerto/props/fondo/prop_fondo.tscn" id="2_ox7hs"]
+[ext_resource type="PackedScene" uid="uid://cpn70cmwel0g7" path="res://game/rooms/puerto/walkable_areas/camino_puerto/walkable_area_camino_puerto.tscn" id="2_wtumk"]
+[ext_resource type="Texture2D" uid="uid://cvq5cepohk88i" path="res://game/rooms/puerto/props/fondo/puerto.png" id="4_ng1pa"]
+[ext_resource type="PackedScene" uid="uid://dqegg2fkvwcnv" path="res://game/rooms/puerto/regions/regionpuerto/region_regionpuerto.tscn" id="5_ng1pa"]
+[ext_resource type="PackedScene" uid="uid://0qyxasqreroj" path="res://game/characters/mateo/character_mateo.tscn" id="6_7u7b6"]
+[ext_resource type="PackedScene" uid="uid://bsd4f4xvx3o67" path="res://game/rooms/puerto/regions/salida_a_casas/region_salida_a_casas.tscn" id="6_l0mrq"]
+
+[node name="RoomPuerto" type="Node2D" unique_id=2114586584]
+script = ExtResource("1_4c27d")
+script_name = "Puerto"
+width = 320
+height = 200
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=1291843428]
+
+[node name="CaminoPuerto" parent="WalkableAreas" unique_id=1265123045 instance=ExtResource("2_wtumk")]
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(71, -44, 32, 10, 60, 16, 57, 28, 20, 26, -126, 26, -125, -2, 6, 12, 29, -11, 10, -25, 15, -27, 33, -15, 63, -45)])
+
+[node name="Props" type="Node2D" parent="." unique_id=47136504]
+
+[node name="Fondo" parent="Props" unique_id=1263411844 instance=ExtResource("2_ox7hs")]
+position = Vector2(160, 72)
+texture = ExtResource("4_ng1pa")
+baseline = -30
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=1168217760]
+
+[node name="Regions" type="Node2D" parent="." unique_id=1814672855]
+
+[node name="Regionpuerto" parent="Regions" unique_id=431849644 instance=ExtResource("5_ng1pa")]
+position = Vector2(191, 119)
+scaling = true
+scale_top = 0.2
+interaction_polygon = PackedVector2Array(-18, -5, -48, 21, 19, 22, 28, 1, 44.571045, -27.723122, 54, -44, 38, -48, 17.26532, -33.131153)
+interaction_polygon_position = Vector2(-48, 4)
+
+[node name="Regionpuerto3" parent="Regions" unique_id=966565322 instance=ExtResource("5_ng1pa")]
+position = Vector2(160, 100)
+scaling = true
+scale_top = 0.4
+scale_bottom = 0.6
+interaction_polygon = PackedVector2Array(27, -32, 36, -23, 30, -20, 21, -30)
+interaction_polygon_position = Vector2(-44, 20)
+
+[node name="SalidaACasas" parent="Regions" unique_id=1029613726 instance=ExtResource("6_l0mrq")]
+position = Vector2(160, 100)
+interaction_polygon_position = Vector2(32, -29)
+
+[node name="Markers" type="Node2D" parent="." unique_id=1506852908]
+
+[node name="Characters" type="Node2D" parent="." unique_id=1848755541]
+
+[node name="CharacterMateo *" parent="Characters" unique_id=462872113 instance=ExtResource("6_7u7b6")]
+position = Vector2(153, 139)
+metadata/EDITOR_TMP_COPY_OF = "Mateo"

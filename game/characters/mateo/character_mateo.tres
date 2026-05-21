@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://c8486to4ungjp"]
+
+[ext_resource type="Script" uid="uid://67ti44m5n8ef" path="res://game/characters/mateo/character_mateo_state.gd" id="1_0df63"]
+
+[resource]
+resource_name = "Mateo"
+script = ExtResource("1_0df63")
+script_name = "Mateo"
+scene = "res://game/characters/mateo/character_mateo.tscn"

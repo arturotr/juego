@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://k8032yjnyijw"]
+
+[ext_resource type="Script" uid="uid://b0uwmwml7mqfj" path="res://game/rooms/casas_puerto/hotspots/muelle/hotspot_muelle.gd" id="1_le8gs"]
+
+[node name="Muelle" type="Area2D" unique_id=1122374628]
+script = ExtResource("1_le8gs")
+script_name = "Muelle"
+description = "Muelle"
+cursor = 1
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=129113378]
+modulate = Color(1, 0, 1, 1)
+scale = Vector2(6.199999, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://d03111dewlv18"]
+
+[ext_resource type="Script" uid="uid://dpsdqlawhpocm" path="res://game/rooms/puerto/props/fondo/prop_fondo.gd" id="1_01ssh"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_01ssh"]
+load_path = "res://.godot/imported/muycercacasiperfeee.png-edc54dfc396638a1c19bdd499a3e095b.ctex"
+
+[node name="Fondo" type="Area2D" unique_id=1263411844]
+input_pickable = false
+script = ExtResource("1_01ssh")
+script_name = "Fondo"
+description = "Fondo"
+clickable = false
+cursor = 1
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=896494631]
+texture_filter = 1
+texture = SubResource("CompressedTexture2D_01ssh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=856950030]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1406743798]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1821866829]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

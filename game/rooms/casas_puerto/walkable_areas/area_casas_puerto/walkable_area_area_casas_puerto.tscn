@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bh02ji1rd24kp"]
+
+[ext_resource type="Script" uid="uid://c6n0m3lhk5om4" path="res://game/rooms/casas_puerto/walkable_areas/area_casas_puerto/walkable_area_area_casas_puerto.gd" id="1_t5mri"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_t5mri"]
+vertices = PackedVector2Array(-2, -63, -5, -72, 3, -71, 9, -63, 9, -54, 111, 5, 161, 3, 159, 45, 100, 45, 78, -3, 32, 43, -10, -46, -6, -57, 9, -38, -41, -19, 21, -18, 66, -17, -3, 43, -78, -12, -128, 41, -160, 14, -159, -3, -119.4375, -9.9296875, -27, -28, 12, -25)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 6, 7, 8), PackedInt32Array(9, 5, 8, 10), PackedInt32Array(11, 12, 0, 4, 13), PackedInt32Array(14, 15, 16, 9, 10, 17, 18), PackedInt32Array(17, 19, 20, 21, 22, 18), PackedInt32Array(15, 14, 23, 24), PackedInt32Array(24, 23, 11, 13)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(9, -54, 9, -38, 12, -25, 21, -18, 66, -17, 78, -3, 111, 5, 161, 3, 159, 45, 100, 45, 32, 43, -3, 43, -128, 41, -160, 14, -159, -3, -119.43977, -9.928024, -78, -12, -41, -19, -27, -28, -10, -46, -6, -57, -2, -63, -5, -72, 3, -71, 9, -63)])
+agent_radius = 0.0
+
+[node name="AreaCasasPuerto" type="Node2D" unique_id=1715359670]
+position = Vector2(160, 100)
+script = ExtResource("1_t5mri")
+script_name = "AreaCasasPuerto"
+description = "Area Casas Puerto"
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(9, -54, 9, -38, 12, -25, 21, -18, 66, -17, 78, -3, 111, 5, 161, 3, 159, 45, 100, 45, 32, 43, -3, 43, -128, 41, -160, 14, -159, -3, -119.43977, -9.928024, -78, -12, -41, -19, -27, -28, -10, -46, -6, -57, -2, -63, -5, -72, 3, -71, 9, -63)])
+interaction_polygon_position = Vector2(1, 30)
+
+[node name="Perimeter" type="NavigationRegion2D" parent="." unique_id=236523197]
+visible = false
+modulate = Color(0, 1, 0, 1)
+position = Vector2(1, 30)
+navigation_polygon = SubResource("NavigationPolygon_t5mri")
