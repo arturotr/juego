@@ -14,6 +14,10 @@ func _on_click() -> void:
 # 1. Extraemos el número de comando de la cola de eventos de Popochiu
 	var comando_activo = PopochiuUtils.e.current_command
 	
+	if comando_activo == NineVerbCommands.Commands.WALK_TO and esta_abierta:
+		await C.player.walk_to_prop("PuertaCasaGrande")
+		await R.goto_room("CasaMagnolia")
+		return # Salimos para que no ejecute el resto del código
 	# 2. Hacemos referencia directa al Enum de tu clase NineVerbCommands
 	# Accedemos a NineVerbCommands.Commands.OPEN (que vale 1) y NineVerbCommands.Commands.CLOSE (que vale 4)
 	

@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dsvhxv8q6350t"]
+
+[ext_resource type="Script" path="res://game/rooms/casa_magnolia/props/fondo_casa_magnolia/prop_fondo_casa_magnolia.gd" id="1_mk5up"]
+
+[node name="FondoCasaMagnolia" type="Area2D" unique_id=1054235041]
+input_pickable = false
+script = ExtResource("1_mk5up")
+script_name = "FondoCasaMagnolia"
+description = "Fondo Casa Magnolia"
+clickable = false
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1607069599]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1392202904]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=692735556]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=416326047]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

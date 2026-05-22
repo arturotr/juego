@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://p7elj3xmth8s"]
+
+[node name="Entrada" type="Marker2D" unique_id=1972863737]
+visible = false

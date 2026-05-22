@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://dp3fu35f7l3fb"]
+
+[ext_resource type="Script" path="res://game/rooms/casa_magnolia/room_casa_magnolia_state.gd" id="1_ul151"]
+
+[resource]
+resource_name = "CasaMagnolia"
+script = ExtResource("1_ul151")
+script_name = "CasaMagnolia"
+scene = "res://game/rooms/casa_magnolia/room_casa_magnolia.tscn"
