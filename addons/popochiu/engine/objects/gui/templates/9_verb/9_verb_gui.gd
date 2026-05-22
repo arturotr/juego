@@ -199,13 +199,13 @@ func _on_inventory_item_selected(item: PopochiuInventoryItem) -> void:
 ## Called when the game is saved. By default, it shows [code]Game saved[/code] in the SystemText
 ## component.
 func _on_game_saved() -> void:
-	PopochiuUtils.g.show_system_text("Game saved")
+	PopochiuUtils.g.show_system_text("Juego guardado")
 
 
 ## Called when a game is loaded. [param loaded_game] has the loaded data. By default, it shows
 ## [code]Game loaded[/code] in the SystemText component.
 func _on_game_loaded(loaded_game: Dictionary) -> void:
-	await PopochiuUtils.g.show_system_text("Game loaded")
+	await PopochiuUtils.g.show_system_text("Juego cargado")
 	
 	super(loaded_game)
 
@@ -235,20 +235,20 @@ func _on_classic_sentence_toggled(button_pressed: bool) -> void:
 
 func _on_settings_option_selected(option_name: String) -> void:
 	match option_name:
-		"save":
+		"Guardar":
 			save_and_load_popup.open_save()
-		"load":
+		"Cargar":
 			save_and_load_popup.open_load()
-		"history":
+		"Historial":
 			history_popup.open()
-		"quit":
+		"Salir":
 			quit_popup.open()
 
 
 func _show_command_on(item_1_name: String, item_2_name := "") -> void:
-	var preposition = "on"
+	var preposition = "con"
 	if PopochiuUtils.e.current_command == NineVerbCommands.Commands.GIVE:
-		preposition = "to"
+		preposition = "a"
 	PopochiuUtils.g.show_hover_text("%s %s %s %s" % [
 		PopochiuUtils.e.get_current_command_name(), item_1_name, preposition, item_2_name
 	])

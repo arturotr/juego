@@ -10,8 +10,22 @@ var state: Data = load("res://game/inventory_items/tinta/inventory_item_tinta.tr
 # Called when the item is clicked in the inventory
 func _on_click() -> void:
 	# Replace the call to E.command_fallback() to implement your code.
-	E.command_fallback()
-
+# Al igual que con el Prop, leemos qué botón de la interfaz está pulsado
+	var comando_activo = PopochiuUtils.e.current_command
+	
+	if comando_activo == NineVerbCommands.Commands.LOOK_AT:
+		# Mateo describe la tinta directamente desde su inventario
+		await C.player.say("Es un viejo tintero de vidrio. Está completamente seco.")
+	
+	elif comando_activo == NineVerbCommands.Commands.USE:
+		# Dejamos esto preparado por si en el futuro el jugador intenta
+		# usar la tinta con otro objeto (ej: Usar Tinta con Pluma)
+		E.command_fallback()
+		
+	else:
+		# Si intenta "Hablar", "Coger" o "Abrir" la tinta dentro del bolsillo,
+		# dejamos que Popochiu muestre su respuesta negativa por defecto.
+		E.command_fallback()
 
 # Called when the item is right-clicked in the inventory
 func _on_right_click() -> void:
@@ -47,5 +61,8 @@ func _on_discard() -> void:
 	# Calling `super()` preserves default behavior as well.
 	super()
 
+func _on_look_at() -> void:
+	# Mateo dice la descripción desde donde esté parado
+	await C.player.say("Es un viejo tintero de vidrio. Está completamente seco.")
 
 #endregion

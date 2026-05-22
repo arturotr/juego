@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://esorelppu4hw"]
+[gd_scene format=3 uid="uid://esorelppu4hw"]
 
 [ext_resource type="Theme" uid="uid://dpequqav4rjaf" path="res://addons/popochiu/engine/objects/gui/resources/base_gui_theme.tres" id="1_s7kd8"]
 [ext_resource type="Script" uid="uid://bfi4nxo2xd6ln" path="res://addons/popochiu/engine/objects/gui/components/hover_text/hover_text.gd" id="2_r2ckj"]
 
-[node name="HoverText" type="Control" groups=["popochiu_gui_component"]]
+[node name="HoverText" type="Control" unique_id=728597106 groups=["popochiu_gui_component"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,7 +14,7 @@ mouse_filter = 2
 theme = ExtResource("1_s7kd8")
 script = ExtResource("2_r2ckj")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1600789157]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
