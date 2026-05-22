@@ -33,17 +33,9 @@ baseline = -30
 [node name="Regionpuerto" parent="Regions" unique_id=431849644 instance=ExtResource("5_ng1pa")]
 position = Vector2(191, 119)
 scaling = true
-scale_top = 0.2
-interaction_polygon = PackedVector2Array(-18, -5, -48, 21, 19, 22, 28, 1, 44.571045, -27.723122, 54, -44, 38, -48, 17.26532, -33.131153)
+scale_top = 0.25
+interaction_polygon = PackedVector2Array(-18, -5, -48, 21, 19, 22, 28, 1, 44.571045, -27.723122, 54, -44, 38, -48, 17.26532, -33.131153, 8, -26, 0, -34, -3, -33, 6, -24)
 interaction_polygon_position = Vector2(-48, 4)
-
-[node name="Regionpuerto3" parent="Regions" unique_id=966565322 instance=ExtResource("5_ng1pa")]
-position = Vector2(160, 100)
-scaling = true
-scale_top = 0.4
-scale_bottom = 0.6
-interaction_polygon = PackedVector2Array(27, -32, 36, -23, 30, -20, 21, -30)
-interaction_polygon_position = Vector2(-44, 20)
 
 [node name="SalidaACasas" parent="Regions" unique_id=1029613726 instance=ExtResource("6_l0mrq")]
 position = Vector2(160, 100)

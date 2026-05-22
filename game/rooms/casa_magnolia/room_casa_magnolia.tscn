@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://3hv02hr44gyh" path="res://game/rooms/casa_magnolia/walkable_areas/area_casa_magnolia/walkable_area_area_casa_magnolia.tscn" id="2_mssbg"]
 [ext_resource type="PackedScene" uid="uid://p7elj3xmth8s" path="res://game/rooms/casa_magnolia/markers/entrada/marker_entrada.tscn" id="4_1rgn2"]
 [ext_resource type="Texture2D" uid="uid://bd0y8wlypnssj" path="res://game/rooms/casa_magnolia/props/fondo_casa_magnolia/CasaMagnolia.png" id="4_mssbg"]
+[ext_resource type="PackedScene" uid="uid://wnb3beg5q12k" path="res://game/rooms/casa_magnolia/hotspots/plaza/hotspot_plaza.tscn" id="5_lu8kd"]
 
 [node name="RoomCasaMagnolia" type="Node2D" unique_id=1369386390]
 script = ExtResource("1_jkqg8")
@@ -16,7 +17,7 @@ height = 200
 
 [node name="AreaCasaMagnolia" parent="WalkableAreas" unique_id=898561750 instance=ExtResource("2_mssbg")]
 scale = Vector2(1.5, 1.5)
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(-80, 10, -66, 6, -46.666668, 7.333336, -9.333336, 4.666664, -6, 8, 8.666664, 9.333336, 9.333336, 11.333336)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(-88.66667, 8.666664, -74, 4, -46, 6, -9.333336, 4.666664, -6, 8, 8.666664, 9.333336, 9.333336, 11.333336)])
 interaction_polygon_position = Vector2(-1.3333334, 16.666666)
 
 [node name="Props" type="Node2D" parent="." unique_id=1402765661]
@@ -27,11 +28,18 @@ texture = ExtResource("4_mssbg")
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=181463805]
 
+[node name="Plaza" parent="Hotspots" unique_id=199664739 instance=ExtResource("5_lu8kd")]
+position = Vector2(160, 100)
+walk_to_point = Vector2(-125, 18)
+look_at_point = Vector2(-125.84129, 18.197632)
+interaction_polygon = PackedVector2Array(-13, -26, 12, -20, 14, 25, -13, 31)
+interaction_polygon_position = Vector2(-124, 4)
+
 [node name="Regions" type="Node2D" parent="." unique_id=102186751]
 
 [node name="Markers" type="Node2D" parent="." unique_id=1005275151]
 
 [node name="Entrada" parent="Markers" unique_id=1972863737 instance=ExtResource("4_1rgn2")]
-position = Vector2(65.42478, 134.40326)
+position = Vector2(68.20069, 130.70204)
 
 [node name="Characters" type="Node2D" parent="." unique_id=1307031834]

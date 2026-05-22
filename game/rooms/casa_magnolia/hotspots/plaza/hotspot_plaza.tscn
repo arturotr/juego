@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://wnb3beg5q12k"]
+
+[ext_resource type="Script" path="res://game/rooms/casa_magnolia/hotspots/plaza/hotspot_plaza.gd" id="1_pro0f"]
+
+[node name="Plaza" type="Area2D" unique_id=199664739]
+script = ExtResource("1_pro0f")
+script_name = "Plaza"
+description = "Plaza"
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2061653329]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

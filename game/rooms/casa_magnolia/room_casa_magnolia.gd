@@ -14,7 +14,7 @@ var state: Data = load("res://game/rooms/casa_magnolia/room_casa_magnolia.tres")
 # character position and facing direction, active walkable area, props visibility, etc.).
 func _on_room_entered() -> void:
 	C.player.position = get_marker("Entrada").position
-	await C.player.walk_to(Vector2(65, 127))
+	await C.player.walk_to(Vector2(70, 127))
 
 
 # Called after the room transition completes; the room is now visible.
