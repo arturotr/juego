@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://drvkiell1fgf0"]
+
+[ext_resource type="Script" path="res://game/inventory_items/tinta/inventory_item_tinta_state.gd" id="1_t34eq"]
+
+[resource]
+resource_name = "Tinta"
+script = ExtResource("1_t34eq")
+script_name = "Tinta"
+scene = "res://game/inventory_items/tinta/inventory_item_tinta.tscn"

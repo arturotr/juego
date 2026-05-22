@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dsvhxv8q6350t"]
 
 [ext_resource type="Script" uid="uid://c1welm6iohpji" path="res://game/rooms/casa_magnolia/props/fondo_casa_magnolia/prop_fondo_casa_magnolia.gd" id="1_mk5up"]
-[ext_resource type="Texture2D" uid="uid://brcmbkfc11vt6" path="res://game/rooms/casa_magnolia/props/fondo_casa_magnolia/dibujandofondopuerta3.png" id="2_tfoi7"]
+[ext_resource type="Texture2D" uid="uid://bxyvqs3rxxgw0" path="res://game/rooms/casa_magnolia/props/fondo_casa_magnolia/CasaMagnolia (1).png" id="2_tfoi7"]
 
 [node name="FondoCasaMagnolia" type="Area2D" unique_id=1054235041]
 input_pickable = false

@@ -110,6 +110,7 @@ animation = &"walk_to"
 
 [node name="9VerbPanel" parent="." unique_id=1308707667 instance=ExtResource("4_qnvga")]
 unique_name_in_owner = true
+self_modulate = Color(0.65882355, 0, 0.65882355, 1)
 custom_minimum_size = Vector2(320, 68)
 layout_mode = 1
 anchors_preset = 12
@@ -133,6 +134,7 @@ script = ExtResource("8_jeqvj")
 follows_cursor = false
 
 [node name="SystemText" parent="." unique_id=833741743 instance=ExtResource("8_75iei")]
+modulate = Color(0.65882355, 0, 0.65882355, 1)
 layout_mode = 1
 
 [node name="Popups" type="Control" parent="." unique_id=2011304843]

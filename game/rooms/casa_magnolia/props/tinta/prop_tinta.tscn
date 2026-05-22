@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://56faau82i0il"]
+
+[ext_resource type="Script" uid="uid://d2x028p5vt4a" path="res://game/rooms/casa_magnolia/props/tinta/prop_tinta.gd" id="1_tmvkd"]
+[ext_resource type="Texture2D" uid="uid://bwvvahugndrvo" path="res://game/rooms/casa_magnolia/props/tinta/tinta.png" id="2_hihge"]
+
+[node name="Tinta" type="Area2D" unique_id=1904133585]
+input_pickable = false
+script = ExtResource("1_tmvkd")
+script_name = "Tinta"
+description = "Tinta"
+clickable = false
+cursor = 1
+interaction_polygon = PackedVector2Array(-5, -6, -2, -6, 0, -5, 2, -3, 2, -1, 2, 1, 4, 1, 5, 2, 4, 4, -2, 3, -5, -2)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1605262354]
+texture_filter = 1
+texture = ExtResource("2_hihge")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1466426755]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=69640488]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-5, -6, -2, -6, 0, -5, 2, -3, 2, -1, 2, 1, 4, 1, 5, 2, 4, 4, -2, 3, -5, -2)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1523345183]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

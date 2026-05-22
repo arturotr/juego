@@ -39,7 +39,7 @@ func _ready() -> void:
 	set_meta(DFLT_POSITION, rich_text_label.position)
 	
 	modulate.a = 0.0
-	_secs_per_character = PopochiuUtils.e.text_speed
+	_secs_per_character = 0.0
 	_x_limit = PopochiuUtils.e.width / (
 		PopochiuUtils.e.scale.x if PopochiuUtils.e.settings.scale_gui else 1.0
 	)
@@ -146,7 +146,7 @@ func disappear() -> void:
 
 
 func change_speed() -> void:
-	_secs_per_character = PopochiuUtils.e.text_speed
+	_secs_per_character = 0.0
 
 
 #endregion
@@ -235,17 +235,26 @@ func _wait_input() -> void:
 	if is_instance_valid(tween) and tween.finished.is_connected(_wait_input):
 		tween.finished.disconnect(_wait_input)
 	
-	if PopochiuUtils.e.auto_continue_after >= 0.0:
-		_auto_continue = true
-		await get_tree().create_timer(PopochiuUtils.e.auto_continue_after + 0.2).timeout
+	# --- NUEVA LÓGICA: Auto-continuar según la longitud del texto ---
+	_auto_continue = true
+	
+	# 1. Contamos cuántos caracteres reales tiene la frase de Mateo
+	var total_characters := rich_text_label.get_total_character_count()
+	
+	# 2. Calculamos el tiempo de espera dinámico:
+	# - 1.0: Tiempo mínimo en segundos que durará CUALQUIER frase (para que no desaparezca un "¡Ah!" al instante).
+	# - 0.05: Segundos extra que añadimos por cada letra (a menor número, más rápido tendrá que leer el jugador).
+	var tiempo_lectura := 1.0 + (total_characters * 0.05)
+	
+	# 3. Creamos el temporizador en Godot con ese tiempo exacto
+	await get_tree().create_timer(tiempo_lectura).timeout
+	
+	# 4. Si el jugador no ha hecho clic para saltarlo antes, el diálogo se cierra solo
+	if _auto_continue:
+		_continue(true)
 		
-		if _auto_continue:
-			_continue(true)
-	else:
-		_show_icon()
-
-
 func _show_icon() -> void:
+	return
 	if is_instance_valid(continue_icon_tween) and continue_icon_tween.is_running():
 		continue_icon_tween.kill()
 	

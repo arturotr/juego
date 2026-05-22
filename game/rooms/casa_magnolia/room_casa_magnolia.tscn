@@ -4,7 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://dsvhxv8q6350t" path="res://game/rooms/casa_magnolia/props/fondo_casa_magnolia/prop_fondo_casa_magnolia.tscn" id="2_5okwb"]
 [ext_resource type="PackedScene" uid="uid://3hv02hr44gyh" path="res://game/rooms/casa_magnolia/walkable_areas/area_casa_magnolia/walkable_area_area_casa_magnolia.tscn" id="2_mssbg"]
 [ext_resource type="PackedScene" uid="uid://p7elj3xmth8s" path="res://game/rooms/casa_magnolia/markers/entrada/marker_entrada.tscn" id="4_1rgn2"]
-[ext_resource type="Texture2D" uid="uid://bd0y8wlypnssj" path="res://game/rooms/casa_magnolia/props/fondo_casa_magnolia/CasaMagnolia.png" id="4_mssbg"]
+[ext_resource type="Texture2D" uid="uid://bwvvahugndrvo" path="res://game/rooms/casa_magnolia/props/tinta/tinta.png" id="5_0vo62"]
+[ext_resource type="PackedScene" uid="uid://56faau82i0il" path="res://game/rooms/casa_magnolia/props/tinta/prop_tinta.tscn" id="5_ley07"]
 [ext_resource type="PackedScene" uid="uid://wnb3beg5q12k" path="res://game/rooms/casa_magnolia/hotspots/plaza/hotspot_plaza.tscn" id="5_lu8kd"]
 
 [node name="RoomCasaMagnolia" type="Node2D" unique_id=1369386390]
@@ -17,14 +18,22 @@ height = 200
 
 [node name="AreaCasaMagnolia" parent="WalkableAreas" unique_id=898561750 instance=ExtResource("2_mssbg")]
 scale = Vector2(1.5, 1.5)
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(-88.66667, 8.666664, -74, 4, -46, 6, -9.333336, 4.666664, -6, 8, 8.666664, 9.333336, 9.333336, 11.333336)])
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(-88.66667, 8.666664, -74, 4, -46, 6, -9.333336, 4.666664, -6, 8, 28.666664, 10, 29.333336, 11.333336)])
 interaction_polygon_position = Vector2(-1.3333334, 16.666666)
 
 [node name="Props" type="Node2D" parent="." unique_id=1402765661]
 
 [node name="FondoCasaMagnolia" parent="Props" unique_id=1054235041 instance=ExtResource("2_5okwb")]
 position = Vector2(160, 100)
-texture = ExtResource("4_mssbg")
+
+[node name="Tinta" parent="Props" unique_id=1904133585 instance=ExtResource("5_ley07")]
+position = Vector2(201, 108)
+input_pickable = true
+texture = ExtResource("5_0vo62")
+clickable = true
+walk_to_point = Vector2(-23.033905, 30.764023)
+look_at_point = Vector2(-22.877243, 30.363617)
+interaction_polygon = PackedVector2Array(-5, -7, 4, 1, 3, 5, -2, 5)
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=181463805]
 

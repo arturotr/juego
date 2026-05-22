@@ -40,31 +40,32 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_utwuj")
 metadata/_edit_group_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=523588313]
-modulate = Color(0.65882355, 0, 0.65882355, 1)
+self_modulate = Color(0.65882355, 0, 0.65882355, 1)
 layout_mode = 2
 theme_override_constants/separation = 0
 alignment = 2
 
 [node name="HoverTextCentered" parent="PanelContainer/VBoxContainer" unique_id=934640125 instance=ExtResource("3_d7e26")]
 unique_name_in_owner = true
-modulate = Color(0.65882355, 0, 0.65882355, 1)
 layout_mode = 2
 size_flags_vertical = 3
 script = ExtResource("4_l02vw")
 follows_cursor = false
 
 [node name="Verbs&InventoryContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer" unique_id=692833692]
+self_modulate = Color(0.65882355, 0, 0.65882355, 1)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_g6sga")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/Verbs&InventoryContainer" unique_id=1595264141]
-modulate = Color(0.65882355, 0, 0.65882355, 1)
+self_modulate = Color(0.65882355, 0, 0.65882355, 1)
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_constants/separation = 1
 
 [node name="CommandsContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/Verbs&InventoryContainer/HBoxContainer" unique_id=1891056863]
 unique_name_in_owner = true
+modulate = Color(0.65882355, 0, 0.65882355, 1)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 0

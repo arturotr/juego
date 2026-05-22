@@ -86,10 +86,10 @@ func _play_idle() -> void:
 			mi_animador.play(anim_idle)
 		else:
 			mi_animador.play("animacionesMateo/idle_s")
-		if contador>=10:
-			mi_animador.stop()
-			mi_animador.play("animacionesMateo/saludo_s")
-			contador = 0
+		#if contador>=10:
+			#mi_animador.stop()
+			#mi_animador.play("animacionesMateo/saludo_s")
+			#contador = 0
 
 
 # Override this to alter the walk animation or hook custom logic to it. 

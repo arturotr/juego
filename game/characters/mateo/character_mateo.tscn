@@ -111,6 +111,7 @@ _data = {
 [node name="CharacterMateo" type="Area2D" unique_id=462872113]
 script = ExtResource("1_w2ljm")
 walk_speed = 50.0
+dialog_pos = Vector2(0, -55.010544)
 walk_animation = "walk_s"
 animation_prefix = "walk_"
 script_name = "Mateo"
