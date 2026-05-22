@@ -9,8 +9,11 @@ extends PopochiuHotspot
 # When the hotspot is clicked
 func _on_click() -> void:
 	# Replace the call to E.command_fallback() with your own logic.
-	await C.player.walk_to(Vector2(66,130))
-	await C.player.face_clicked()
+	# Caminamos de forma segura usando await directo
+	await C.player.walk_to(Vector2(66, 130))
+	# Al ejecutarse de inmediato, face_clicked ya no da error de tipo 'Nil'
+	await C.player.face_clicked() 
+	# Cambiamos de sala fuera de cualquier cola
 	R.goto_room("CasasPuerto")	# Example: make the player walk to this hotspot, face it, then say something:
 #	await C.player.walk_to_clicked()
 #	await C.player.face_clicked()

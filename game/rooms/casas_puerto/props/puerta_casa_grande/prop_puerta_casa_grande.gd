@@ -5,9 +5,22 @@ extends PopochiuProp
 # Use `await E.queue([])` to pause execution until the sequence completes.
 const TEXTURA_CERRADA = preload("res://game/rooms/casas_puerto/props/puerta_casa_grande/Puerta_cerrada.png")
 const TEXTURA_ABIERTA = preload("res://game/rooms/casas_puerto/props/puerta_casa_grande/Puerta_abierta.png")
-var esta_abierta: bool = false
-
+var esta_abierta: bool:
+	get:
+		if Engine.is_editor_hint(): return false
+		return R.CasasPuerto.state.puerta_abierta if "CasasPuerto" in R else false
+	set(value):
+		if not Engine.is_editor_hint() and "CasasPuerto" in R:
+			R.CasasPuerto.state.puerta_abierta = value
+@export var suggested_command: NineVerbCommands.Commands = NineVerbCommands.Commands.OPEN
 #region Virtual ####################################################################################
+func _ready() -> void:
+	super()
+	if not Engine.is_editor_hint():
+		# Esperamos un instante a que Popochiu inicialice los estados de la sala
+		await get_tree().process_frame
+		# Sincronizamos el aspecto visual con el estado guardado
+		$Sprite2D.texture = TEXTURA_ABIERTA if esta_abierta else TEXTURA_CERRADA
 # Called when the prop is clicked
 func _on_click() -> void:
 	# Replace the call to E.command_fallback() with your own logic.
@@ -16,7 +29,7 @@ func _on_click() -> void:
 	
 	if comando_activo == NineVerbCommands.Commands.WALK_TO and esta_abierta:
 		await C.player.walk_to_prop("PuertaCasaGrande")
-		await R.goto_room("CasaMagnolia")
+		PopochiuUtils.r.goto_room("CasaMagnolia")
 		return # Salimos para que no ejecute el resto del código
 	# 2. Hacemos referencia directa al Enum de tu clase NineVerbCommands
 	# Accedemos a NineVerbCommands.Commands.OPEN (que vale 1) y NineVerbCommands.Commands.CLOSE (que vale 4)

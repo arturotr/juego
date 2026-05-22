@@ -12,4 +12,3 @@ var Tinta: PIITinta : get = get_Tinta
 # functions ----
 func get_Tinta() -> PIITinta: return get_item_instance("Tinta")
 # ---- functions
-

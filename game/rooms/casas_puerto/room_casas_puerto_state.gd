@@ -4,7 +4,7 @@ extends PopochiuRoomData
 # By default only Godot's built-in types are saved/loaded automatically.
 # Use `save_custom` and `load_custom` to handle custom data types.
 # Note: `script_name` and `scene` variables inherited from the base class are not saved.
-
+var puerta_abierta := false
 
 #region Virtual ####################################################################################
 # Return a Dictionary of custom data to save for this PopochiuRoom.

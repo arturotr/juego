@@ -12,4 +12,3 @@ var Mateo: PCMateo : get = get_Mateo
 # functions ----
 func get_Mateo() -> PCMateo: return get_runtime_character("Mateo")
 # ---- functions
-

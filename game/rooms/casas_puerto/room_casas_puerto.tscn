@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://7aw8sha0506x" path="res://game/rooms/casas_puerto/props/puerta_casa_grande/prop_puerta_casa_grande.tscn" id="4_qlkjg"]
 [ext_resource type="PackedScene" uid="uid://0hv3hxw7kuvi" path="res://game/rooms/casas_puerto/regions/escaleras_fondocasas/region_escaleras_fondocasas.tscn" id="4_s12dc"]
 [ext_resource type="PackedScene" uid="uid://d3jwv6shsp5jk" path="res://game/rooms/casas_puerto/markers/entrada_puerto/marker_entrada_puerto.tscn" id="4_vf483"]
+[ext_resource type="PackedScene" uid="uid://88ea7wnhu08v" path="res://game/rooms/casas_puerto/markers/entrada_casa_magnolia/marker_entrada_casa_magnolia.tscn" id="8_25dmx"]
 
 [node name="RoomCasasPuerto" type="Node2D" unique_id=2100480487]
 script = ExtResource("1_n6qgg")
@@ -29,11 +30,17 @@ look_at_point = Vector2(1.0928345, 56.82672)
 
 [node name="PuertaCasaGrande" parent="Props" unique_id=1563327051 instance=ExtResource("4_qlkjg")]
 position = Vector2(204, 135)
+suggested_command = 1
+walk_to_point = Vector2(-3.804947, 3.3316956)
+look_at_point = Vector2(10.104889, -14.163712)
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=486992552]
 
 [node name="Muelle" parent="Hotspots" unique_id=1122374628 instance=ExtResource("4_ofl3d")]
 position = Vector2(160, 144)
+baseline = -43
+walk_to_point = Vector2(1.5320892, -4.0217896)
+look_at_point = Vector2(1.7236023, -3.8302765)
 
 [node name="Regions" type="Node2D" parent="." unique_id=1091960286]
 
@@ -48,5 +55,8 @@ interaction_polygon_position = Vector2(0, -8)
 
 [node name="EntradaPuerto" parent="Markers" unique_id=216202025 instance=ExtResource("4_vf483")]
 position = Vector2(161.58356, 139.92915)
+
+[node name="EntradaCasaMagnolia" parent="Markers" unique_id=88184619 instance=ExtResource("8_25dmx")]
+position = Vector2(202.56908, 106.627525)
 
 [node name="Characters" type="Node2D" parent="." unique_id=803445156]

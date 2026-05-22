@@ -17,9 +17,6 @@ height = 200
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=924231463]
 
 [node name="AreaCasaMagnolia" parent="WalkableAreas" unique_id=898561750 instance=ExtResource("2_mssbg")]
-scale = Vector2(1.5, 1.5)
-interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(-88.66667, 8.666664, -74, 4, -46, 6, -9.333336, 4.666664, -6, 8, 28.666664, 10, 29.333336, 11.333336)])
-interaction_polygon_position = Vector2(-1.3333334, 16.666666)
 
 [node name="Props" type="Node2D" parent="." unique_id=1402765661]
 

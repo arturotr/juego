@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://88ea7wnhu08v"]
+
+[node name="EntradaCasaMagnolia" type="Marker2D" unique_id=88184619]
+visible = false
