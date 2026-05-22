@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://3hv02hr44gyh"]
+
+[ext_resource type="Script" uid="uid://doi6lrn5e8kyt" path="res://game/rooms/casa_magnolia/walkable_areas/area_casa_magnolia/walkable_area_area_casa_magnolia.gd" id="1_4l2qn"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_4l2qn"]
+vertices = PackedVector2Array(9.3359375, 11.3359375, -80, 10, -66, 6, -46.664063, 7.3359375, 8.6640625, 9.3359375, -6, 8, -9.3359375, 4.6640625)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 0, 3, 5), PackedInt32Array(6, 5, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-80, 10, -66, 6, -46.666668, 7.333336, -9.333336, 4.666664, -6, 8, 8.666664, 9.333336, 9.333336, 11.333336)])
+agent_radius = 0.0
+
+[node name="AreaCasaMagnolia" type="Node2D" unique_id=898561750]
+position = Vector2(160, 100)
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_4l2qn")
+script_name = "AreaCasaMagnolia"
+description = "Area Casa Magnolia"
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(-80, 10, -66, 6, -46.666668, 7.333336, -9.333336, 4.666664, -6, 8, 8.666664, 9.333336, 9.333336, 11.333336)])
+interaction_polygon_position = Vector2(-1.3333334, 16.666666)
+
+[node name="Perimeter" type="NavigationRegion2D" parent="." unique_id=250575274]
+visible = false
+modulate = Color(0, 1, 0, 1)
+position = Vector2(-1.3333334, 16.666666)
+navigation_polygon = SubResource("NavigationPolygon_4l2qn")

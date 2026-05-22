@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brcmbkfc11vt6"
-path="res://.godot/imported/dibujandofondopuerta3.png-c445f8b41f99cf303daa1d027ede17aa.ctex"
+uid="uid://bd0y8wlypnssj"
+path="res://.godot/imported/CasaMagnolia.png-45796c2c5173d13e95c5c27e9a63ec7d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/rooms/casa_magnolia/props/fondo_casa_magnolia/dibujandofondopuerta3.png"
-dest_files=["res://.godot/imported/dibujandofondopuerta3.png-c445f8b41f99cf303daa1d027ede17aa.ctex"]
+source_file="res://game/rooms/casa_magnolia/props/fondo_casa_magnolia/CasaMagnolia.png"
+dest_files=["res://.godot/imported/CasaMagnolia.png-45796c2c5173d13e95c5c27e9a63ec7d.ctex"]
 
 [params]
 
