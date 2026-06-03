@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://bkh5pben1c8ss"]
+
+[ext_resource type="Script" path="res://game/inventory_items/lapiz/inventory_item_lapiz_state.gd" id="1_l2of8"]
+
+[resource]
+resource_name = "Lapiz"
+script = ExtResource("1_l2of8")
+script_name = "Lapiz"
+scene = "res://game/inventory_items/lapiz/inventory_item_lapiz.tscn"

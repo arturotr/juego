@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://cuglfd8tyd3wl"]
+
+[ext_resource type="Script" path="res://game/inventory_items/maletin/inventory_item_maletin_state.gd" id="1_01gli"]
+
+[resource]
+resource_name = "Maletin"
+script = ExtResource("1_01gli")
+script_name = "Maletin"
+scene = "res://game/inventory_items/maletin/inventory_item_maletin.tscn"

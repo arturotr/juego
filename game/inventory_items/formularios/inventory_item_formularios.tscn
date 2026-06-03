@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://ddhdgkb8lrbta"]
+
+[ext_resource type="Texture2D" uid="uid://60p61el56uda" path="res://game/inventory_items/formularios/Formularios.png" id="1_dpmgi"]
+[ext_resource type="Script" uid="uid://ca7elnv4huu3h" path="res://game/inventory_items/formularios/inventory_item_formularios.gd" id="1_wkudm"]
+
+[node name="ItemFormularios" type="TextureRect" unique_id=1258814061]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_dpmgi")
+stretch_mode = 5
+script = ExtResource("1_wkudm")
+script_name = "Formularios"
+description = "Formularios"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=701837401]

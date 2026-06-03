@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://co5ovrcsbsbvy"]
+
+[ext_resource type="Texture2D" uid="uid://bbql65fvg4hki" path="res://game/inventory_items/maletin_vacio/MaletinVacio.png" id="1_2tj0c"]
+[ext_resource type="Script" uid="uid://cpoy2kxu2j3tg" path="res://game/inventory_items/maletin_vacio/inventory_item_maletin_vacio.gd" id="1_at8og"]
+
+[node name="ItemMaletinVacio" type="TextureRect" unique_id=1338269074]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_2tj0c")
+stretch_mode = 5
+script = ExtResource("1_at8og")
+script_name = "MaletinVacio"
+description = "Maletin Vacio"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=670572622]

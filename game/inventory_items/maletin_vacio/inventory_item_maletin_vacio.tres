@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://dpq5t73btifvk"]
+
+[ext_resource type="Script" path="res://game/inventory_items/maletin_vacio/inventory_item_maletin_vacio_state.gd" id="1_7q0cx"]
+
+[resource]
+resource_name = "MaletinVacio"
+script = ExtResource("1_7q0cx")
+script_name = "MaletinVacio"
+scene = "res://game/inventory_items/maletin_vacio/inventory_item_maletin_vacio.tscn"

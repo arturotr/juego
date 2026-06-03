@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://3xs7ibuxseb8"]
+
+[ext_resource type="Texture2D" uid="uid://d2jaxf2d0ndrq" path="res://game/inventory_items/maletin/Maletin.png" id="1_10k3c"]
+[ext_resource type="Script" uid="uid://y2x8ryo51sld" path="res://game/inventory_items/maletin/inventory_item_maletin.gd" id="1_lj583"]
+
+[node name="ItemMaletin" type="TextureRect" unique_id=865492946]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_10k3c")
+stretch_mode = 5
+script = ExtResource("1_lj583")
+script_name = "Maletin"
+description = "Maletin"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=71963515]

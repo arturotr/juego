@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://k6p18fbsj5kw"]
+
+[ext_resource type="Script" uid="uid://ck7ru1wx2ywfq" path="res://game/inventory_items/lapiz/inventory_item_lapiz.gd" id="1_gdkf6"]
+[ext_resource type="Texture2D" uid="uid://bs1uroybqe0ce" path="res://game/inventory_items/lapiz/Lapiz.png" id="1_iimox"]
+
+[node name="ItemLapiz" type="TextureRect" unique_id=25210344]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_iimox")
+stretch_mode = 5
+script = ExtResource("1_gdkf6")
+script_name = "Lapiz"
+description = "Lapiz"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=391945454]

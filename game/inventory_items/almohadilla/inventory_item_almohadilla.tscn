@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bay47exejdr0u"]
+
+[ext_resource type="Texture2D" uid="uid://8i0ai3sb6eml" path="res://game/inventory_items/almohadilla/AlmohadillaTinta.png" id="1_i2ohe"]
+[ext_resource type="Script" uid="uid://bjxjveiconcic" path="res://game/inventory_items/almohadilla/inventory_item_almohadilla.gd" id="1_y7wns"]
+
+[node name="ItemAlmohadilla" type="TextureRect" unique_id=1234223237]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_i2ohe")
+stretch_mode = 5
+script = ExtResource("1_y7wns")
+script_name = "Almohadilla"
+description = "Almohadilla"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=352445079]
