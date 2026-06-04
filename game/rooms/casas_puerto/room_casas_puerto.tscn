@@ -30,7 +30,6 @@ look_at_point = Vector2(1.0928345, 56.82672)
 
 [node name="PuertaCasaGrande" parent="Props" unique_id=1563327051 instance=ExtResource("4_qlkjg")]
 position = Vector2(204, 135)
-suggested_command = 1
 walk_to_point = Vector2(-3.804947, 3.3316956)
 look_at_point = Vector2(10.104889, -14.163712)
 

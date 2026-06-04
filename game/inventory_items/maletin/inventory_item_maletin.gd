@@ -29,6 +29,7 @@ func _on_click() -> void:
 	elif E.current_command != NineVerbCommands.Commands.OPEN:
 		# Respuesta por defecto si la miran o intentan usar con otra cosa
 		await C.player.say("Es mi vieja maleta de cuero.")
+		await C.player.say("Está llena de cosas, debería vaciarla para ver lo que tiene dentro.")
 	else:
 		E.command_fallback()
 

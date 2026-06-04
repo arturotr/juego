@@ -18,7 +18,7 @@ func _ready() -> void:
 		set("visual", mi_sprite)
 	if "animation_player" in self:
 		set("animation_player", $AnimationPlayer)
-		mi_animador.play("animacionesMateo/saludo_s")
+		mi_animador.play("saludo_s")
 
 
 #region Virtual ####################################################################################
@@ -77,15 +77,15 @@ func _on_item_used(_item: PopochiuInventoryItem) -> void:
 func _play_idle() -> void:
 	# If you want to preserve the default idle behavior, make sure to keep
 	# the call to `super()` in your override.
-	super()
+	#super()
 	# Para evitar errores, que mire al sur por defecto cuando pare
 	if mi_animador:
-		var anim_idle = "animacionesMateo/idle_" + ultima_direccion
+		var anim_idle = "idle_" + ultima_direccion
 		if mi_animador.has_animation(anim_idle):
-			contador+=1
+			#contador+=1
 			mi_animador.play(anim_idle)
 		else:
-			mi_animador.play("animacionesMateo/idle_s")
+			mi_animador.play("idle_s")
 		#if contador>=10:
 			#mi_animador.stop()
 			#mi_animador.play("animacionesMateo/saludo_s")
@@ -98,7 +98,7 @@ func _play_idle() -> void:
 func _play_walk(target_pos: Vector2) -> void:
 	# If you want to preserve the default walking behavior, make sure to keep
 	# the call to `super(target_pos)` in your override.
-	super(target_pos)
+	#super(target_pos)
 	var diff = target_pos - global_position
 	if abs(diff.x) > abs(diff.y):
 		ultima_direccion = "e" if diff.x > 0 else "w"
@@ -106,14 +106,21 @@ func _play_walk(target_pos: Vector2) -> void:
 		ultima_direccion = "s" if diff.y > 0 else "n"
 	# PRUEBA DE FUEGO: Forzamos la animación
 	if mi_animador.current_animation != "walk_" + ultima_direccion:
-		mi_animador.play("animacionesMateo/walk_" + ultima_direccion)
+		mi_animador.play("walk_" + ultima_direccion)
 		
 # Override this to alter the talk animation or hook custom logic to it.
 # By default, it plays the "talk" animation from the character's Sprite.
 func _play_talk() -> void:
 	# If you want to preserve the default talk behavior, make sure to keep
 	# the call to `super()` in your override.
-	super()
+	#super()
+	if mi_animador:
+		var anim_talk = "talk_" + ultima_direccion
+		if mi_animador.has_animation(anim_talk):
+			#contador+=1
+			mi_animador.play(anim_talk)
+		else:
+			mi_animador.play("talk_s")
 	
 
 

@@ -65,11 +65,6 @@ popochiu-skip={
 [popochiu]
 
 pixel/pixel_art_textures=true
-aseprite_import/import_animation_by_default=false
-aseprite_import/new_props_visible_by_default=false
-aseprite_import/new_props_clickable_by_default=false
-aseprite_import/only_visible_layers=false
-aseprite_import/wipe_old_animations=false
 inventory/items_on_start=["Maletin"]
 
 [rendering]
